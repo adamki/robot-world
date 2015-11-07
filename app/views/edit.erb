@@ -1,0 +1,7 @@
+<form action="/robots/<%= @robot.id %>" method="post">
+  <p>Edit</p>
+  <input type="hidden" name="_method" value="PUT">
+  <input type="text" name="robot[name]" value="<%= @robot.name %>" id="robot-name">
+  <textarea name="robot[name]" id="robot-name"><%= @robot.name %></textarea><br>
+  <input type="submit" value="Update Task">
+</form>

@@ -33,8 +33,8 @@ class UserSeesAllRobotsTest < FeatureTest
     assert_equal "/robots", current_path
 
 
-    within(".contadiner") do
-      assert page.has_content?("New Robot")
+    within(".container") do
+      assert page.has_content?("adam")
     end
 
   end

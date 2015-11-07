@@ -49,6 +49,10 @@ class RobotWorld
     raw_robot.map {|data| Robot.new(data)}
   end
 
+  def self.delete(id)
+    dataset.where(id: id).delete
+  end
+
   def self.delete_all
     dataset.delete
     database

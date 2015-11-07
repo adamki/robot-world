@@ -5,7 +5,7 @@ class RobotWorldApp < Sinatra::Base
   end
 
   get '/robots' do
-    @robot = RobotWorld.all
+    @robots = RobotWorld.all
     erb :index
   end
 
@@ -19,7 +19,7 @@ class RobotWorldApp < Sinatra::Base
   end
 
   get '/robots/:id/edit' do |id|
-    @Robot = RobotWorld.find(id.to_i)
+    @robot = RobotWorld.find(id.to_i)
     erb :edit
   end
 
@@ -37,8 +37,5 @@ class RobotWorldApp < Sinatra::Base
     RobotWorld.delete(id.to_i)
     redirect '/robots'
   end
-
-
-
 
 end
